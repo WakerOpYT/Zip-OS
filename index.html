@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zip OS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script>  
+	function start_cmd_runner() {
+		while (true){
+			const cmd = prompt("Enter your command:");
+			
+			if (cmd === null){
+				continue;
+			}
+
+			else if (cmd.toLowerCase() === "github"){
+				window.open("https://github.com/WakerOpYT/Zip-OS", "_blank");
+				break;
+			}
+			
+			else{
+				document.getElementById("err").InnerHTML = "Errors: Invalid Command";
+				continue;
+			}
+		}
+	}
+  </script>
+  
+  <style>
+    body {
+      font-family: "Raleway", sans-serif; 
+      color: white;
+      background-color: black;
+	  cursor: crosshair;
+    }
+    
+    h1, h2{
+      color: white;
+    }
+    
+    .cmd-runner-button{
+      background-color: #4CAF50;
+      border-width: 5px;
+	  border-color: white;
+	  border-style: solid;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      font-size: 25px;
+	  cursor: crosshair;
+    }
+    
+    a{
+      color: white;
+      text-decoration: none;
+	  cursor: crosshair
+    }
+	
+	ul li{
+		font-size: 2em;
+		font-weight: bold;
+	}
+  </style>
+</head>
+<body>
+  <h1>Welcome To Zip OS</h1>
+  <p>If you want a full guide, you can check out the Github page(it will be at the bottom of the page). It contains both the guide and the code.</p>
+  
+  <button onclick="start_cmd_runner()" class="cmd-runner-button">Start Command Runner</button>
+  
+  <h2>Links</h2>
+  <ul>
+  <li><a href="https://github.com/WakerOpYT/Zip-OS">Github page</a></li>
+  </ul>
+  
+  <h2 id="err">Errors: None</h2>
+</body>
+</html>
